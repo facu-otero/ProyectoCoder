@@ -1,15 +1,35 @@
-{% extends 'AppCoder/padre.html' %}
+{% extends 'AppCoder/padre.html' %}<!--con esto importo a view del html padre entonces, muestro en todas pestañas lo mismo-->
 
 {% load static %}
 
 {% block contenidoQueCambia %}
 
-    <h2>Lista de cursos</h2>
+
+
+    {% if cursos %}
+    <p>Resultados de la busqueda para la camada {{camada}}</p>
+    <ul>
+        
+        {% for curso in cursos %}
+            <li>
+                {{curso}}
+            </li>
+        {% endfor %}
+            
+
+    </ul>
+    {% endif %}
+            
+
+
+
+    <h2>Lista de todos los cursos</h2>
     
     
     <ul class="list-group list-group-flush">
 
         {% for curso in lista %}
+
         <li class="list-group-item">{{curso.nombre}}, Camada: {{curso.camada}}</li>
         
         {% endfor %}

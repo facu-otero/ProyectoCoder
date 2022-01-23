@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Curso</title>
+</head>
+<body>
+
+    {% if form.errors %}
+        <p style="color:red">Los datos ingresados son incorrectos</p>
+    {% end if %}  
+      
+    <form action="/AppCoder/cursoFormulario/" method="POST">{% csrf_token %}<!-- aca creo el token de validacion para hacer el envio del formulario-->
+
+            {{form.as_table}}    
+
+            <input type="submit" value="Crear curso">
+
+    </form>
+</body>
+</html>
