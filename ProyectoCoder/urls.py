@@ -20,7 +20,7 @@ from AppCoder.views import crea_curso
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('crea-curso/<nombre>/<camada>',crea_curso),
+    
     path('AppCoder/',include('AppCoder.urls'))
     
 ]

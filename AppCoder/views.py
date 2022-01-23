@@ -13,8 +13,10 @@ def crea_curso(self, nombre, camada):
 def inicio(request):
     return render(request,'AppCoder/inicio.html')
     
-def curso(request):
-    return render(request,'AppCoder/cursos.html')
+def cursos(request):
+    lista = Curso.objects.all()
+    
+    return render(request,'AppCoder/cursos.html', {"lista":lista})
 
 def profesores(request):
     return render(request,'AppCoder/profesores.html')
