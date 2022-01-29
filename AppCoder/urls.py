@@ -11,5 +11,8 @@ urlpatterns = [
     path('cursoFormulario/',views.cursoFormulario, name = "cursoFormulario"),
     path('busquedaCamada/',views.busquedaCamada, name = "busquedaCamada"),
     path('buscar/',views.buscar, name = "buscar"),
-   
+    path('lista_profesores/',views.leer_profesores, name = "lista_profesores"),
+    path('eliminarProfesor/<id_profesor>/',views.elimina_profesor, name = "eliminarProfesor"),
+    path('editarProfesor/<profesor_nombre>/',views.editar_profesor, name = "editarProfesor"),
+ 
 ]

@@ -1,4 +1,4 @@
-from dataclasses import Field, field
+
 from django.db import models
 
 # Create your models here.
@@ -22,7 +22,7 @@ class Profesor(models.Model):
     email = models.EmailField()
     profesion = models.CharField(max_length=50)
     def __str__(self):
-        return self.apellido
+        return f'{self.nombre} {self.apellido}'
     
 class Entregable(models.Model):
     nombre = models.CharField(max_length=50)

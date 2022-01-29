@@ -8,9 +8,7 @@
 </head>
 <body>
 
-    {% if form.errors %}
-        <p style="color:red">Los datos ingresados son incorrectos</p>
-    {% end if %}  
+     
       
     <form action="/AppCoder/cursoFormulario/" method="POST">{% csrf_token %}<!-- aca creo el token de validacion para hacer el envio del formulario-->
 

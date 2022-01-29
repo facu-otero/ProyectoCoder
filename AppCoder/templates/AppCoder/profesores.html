@@ -4,7 +4,14 @@
 
 {% block contenidoQueCambia %}
 
-    <p>Lista de profesores</p>
-    
+    <p>Agregar profesor</p>
+    <form action="/AppCoder/profesores/" method="POST">{% csrf_token %}<!-- aca creo el token de validacion para hacer el envio del formulario-->
+
+        {{formulario}}    
+
+        <input type="submit" value="Crear profesor">
+
+</form>
+
 {% endblock contenidoQueCambia %}
     
